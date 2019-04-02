@@ -12,7 +12,7 @@ var Months = [
 	"November",
 	"December"
 ]; 
- var MonthsClone = Months.slice(0);
+var MonthsClone = Months.slice(0);
 
 function sortInTurn(){
 
@@ -30,22 +30,15 @@ function sortAZ(){
 		document.getElementById("AZ").value = "Sort A to Z";
 		document.getElementById("List").innerHTML = Months.join("<br>");
 	}
-	
-	/* for (var i = 0; i < Months.length; i++) {
-		document.getElementById("List").innerHTML += (i+1) + ". " + Months[i]+"<br>";
-	}
-	//alert (Months[3])	
-*/
-	}
+
+}
 
 function sortLtext(){
 
 	var MlenghtText = [];
 	var temp;
 	for (var i=0; i < Months.length; i++){
-	/*	MlenghtText[i] = Months[i].length;
-	}
-	MlenghtText.sort();*/
+
 
 		for (var j=1; j < Months.length; j++){
 			if (Months[j-1].length > Months[j].length){
@@ -68,7 +61,4 @@ function Random(){
 	}
 
 	document.getElementById("List").innerHTML = Months.join("<br>");
-}
-function alert2 (){
-	alert (Months[1].length)
 }
