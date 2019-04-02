@@ -26,7 +26,8 @@ function sortAZ(){
 		document.getElementById("List").innerHTML = Months.join("<br>");
 	}
 	else{
-		Months.reverse()
+		Months.sort();
+		Months.reverse();
 		document.getElementById("AZ").value = "Sort A to Z";
 		document.getElementById("List").innerHTML = Months.join("<br>");
 	}
