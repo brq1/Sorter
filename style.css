@@ -1,0 +1,39 @@
+body {
+background-color: #202020;
+color: white;
+font-family: 'Indie Flower', cursive;
+
+}
+.button {
+    width: 200px;
+    font-size: 24px;
+    background-color: rgb(235, 212, 7);
+}
+
+#all{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#Header {
+    padding: 5px;
+    font-size: 52px;
+    color: rgb(224, 196, 37);
+    
+
+}
+
+#List{
+    width: 380px;
+    padding: 10px;
+    float: left;
+    font-size: 24px;
+}
+#Menu{
+    width: 180px;
+    padding: 10px;
+    float: right;
+	
+}
