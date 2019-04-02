@@ -20,18 +20,16 @@ function sortInTurn(){
 }
 
 function sortAZ(){
+	Months.sort();
 	if (document.getElementById("AZ").value == "Sort A to Z") {
-		Months.sort();
-		document.getElementById("AZ").value = "Sort Z to A";
-		document.getElementById("List").innerHTML = Months.join("<br>");
+			document.getElementById("AZ").value = "Sort Z to A";
+			document.getElementById("List").innerHTML = Months.join("<br>");
 	}
-	else{
-		Months.sort();
+		else{
 		Months.reverse();
 		document.getElementById("AZ").value = "Sort A to Z";
 		document.getElementById("List").innerHTML = Months.join("<br>");
-	}
-
+		}
 }
 
 function sortLtext(){
