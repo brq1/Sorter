@@ -1,17 +1,18 @@
-var StringText = document.getElementById("textArea").value;
-var Words = []
-Words = StringText.split(",");
-
 var azEl = document.getElementById("AZ");
 var listEl = document.getElementById("List");
 
-function sortInTurn(){
+function takeWords(){
+	var StringText = document.getElementById("textArea").value;
+	Words = StringText.split(",");
+}
 
+function sortInTurn(){
+	takeWords();
 	listEl.innerHTML = Words.join("<br>");
 }
 
 function sortAZ(){
-
+	takeWords();
 	Words.sort();
 
 	if (azEl.value == "Sort A to Z") {
@@ -24,7 +25,7 @@ function sortAZ(){
 }
 
 function sortLtext(){
-
+	takeWords();
 	var temp;
 	for (var i=0; i < Words.length; i++){
 
@@ -40,6 +41,7 @@ function sortLtext(){
 }
 
 function Random(){
+	takeWords();
 	var n = Words.length, temp, x;
 	for (i=0; i < n; i++ ) {
 		x = Math.floor(Math.random()*n);
@@ -52,10 +54,8 @@ function Random(){
 }
 
 function test (){
+	alert (takeWords());
+	alert (Words[0]);
+	alert (Words[1]);
 
-	console.log (Words[0]);
-	console.log (Words[1]);
-	console.log (Words[2]);
-	console.log (Words[3]);
-	console.log (Words[4]);
 }
