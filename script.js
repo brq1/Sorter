@@ -1,63 +1,65 @@
-var Months = [ 
-	"January",
-	"February",
-	"March",
-	"April",
-	"May",
-	"Juni",
-	"July",
-	"August",
-	"September",
-	"Oktober",
-	"November",
-	"December"
-]; 
-var MonthsClone = Months.slice(0);
+var azEl = document.getElementById("AZ");
+var listEl = document.getElementById("List");
+
+function takeWords(){
+	var StringText = document.getElementById("textArea").value;
+	Words = StringText.split(",");
+	for (i=0 ; i< Words.length; i++){
+		Words[i].trim();
+	}
+	//Words.trim();
+}
 
 function sortInTurn(){
-
-	document.getElementById("List").innerHTML = MonthsClone.join("<br>");
+	takeWords();
+	listEl.innerHTML = Words.join("<br>");
 }
 
 function sortAZ(){
-	Months.sort();
-	if (document.getElementById("AZ").value == "Sort A to Z") {
-			document.getElementById("AZ").value = "Sort Z to A";
-			document.getElementById("List").innerHTML = Months.join("<br>");
+	takeWords();
+
+	Words.sort();
+
+	if (azEl.value == "Sort A to Z") {
+		azEl.value = "Sort Z to A";
+	} else {
+		Words.reverse();
+		azEl.value = "Sort A to Z";
 	}
-		else{
-		Months.reverse();
-		document.getElementById("AZ").value = "Sort A to Z";
-		document.getElementById("List").innerHTML = Months.join("<br>");
-		}
+	listEl.innerHTML = Words.join("<br>");
 }
 
 function sortLtext(){
-
-	var MlenghtText = [];
+	takeWords();
 	var temp;
-	for (var i=0; i < Months.length; i++){
+	for (var i=0; i < Words.length; i++){
 
-
-		for (var j=1; j < Months.length; j++){
-			if (Months[j-1].length > Months[j].length){
-				temp = Months[j];
-				Months[j] = Months[j-1];
-				Months[j-1] = temp;
+		for (var j=1; j < Words.length; j++){
+			if (Words[j-1].length > Words[j].length){
+				temp = Words[j];
+				Words[j] = Words[j-1];
+				Words[j-1] = temp;
 			}
 		}
 	}
-	document.getElementById("List").innerHTML = Months.join("<br>");
+	listEl.innerHTML = Words.join("<br>");
 }
 
 function Random(){
-	var n = Months.length, temp, x;
+	takeWords();
+	var n = Words.length, temp, x;
 	for (i=0; i < n; i++ ) {
 		x = Math.floor(Math.random()*n);
-		temp = Months [i];
-		Months[i] = Months[x];
-		Months[x] = temp;
+		temp = Words [i];
+		Words[i] = Words[x];
+		Words[x] = temp;
 	}
 
-	document.getElementById("List").innerHTML = Months.join("<br>");
+	listEl.innerHTML = Words.join("<br>");
 }
+
+/*function test (){
+	//alert (takeWords());
+	alert (Words[4].trim());
+
+}*/
