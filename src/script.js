@@ -4,6 +4,10 @@ var listEl = document.getElementById("List");
 function takeWords(){
 	var StringText = document.getElementById("textArea").value;
 	Words = StringText.split(",");
+	for (i=0 ; i< Words.length; i++){
+		Words[i].trim();
+	}
+	//Words.trim();
 }
 
 function sortInTurn(){
@@ -13,6 +17,7 @@ function sortInTurn(){
 
 function sortAZ(){
 	takeWords();
+
 	Words.sort();
 
 	if (azEl.value == "Sort A to Z") {
@@ -53,9 +58,8 @@ function Random(){
 	listEl.innerHTML = Words.join("<br>");
 }
 
-function test (){
-	alert (takeWords());
-	alert (Words[0]);
-	alert (Words[1]);
+/*function test (){
+	//alert (takeWords());
+	alert (Words[4].trim());
 
-}
+}*/
