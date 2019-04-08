@@ -5,11 +5,12 @@ font-family: 'Indie Flower', cursive;
 
 }
 .button {
+    display: block;
+    height: 200px;
     width: 200px;
-    font-size: 24px;
-    background-color: rgb(235, 212, 7);
+    background: #0bdf00;
+    border: 2px solid rgba(33, 68, 72, 0.59);
 }
-
 #all{
     width: 600px;
     margin-left: auto;
@@ -26,13 +27,18 @@ font-family: 'Indie Flower', cursive;
 }
 
 #List{
-    width: 380px;
+    background-color: #3a3939;
+    width: 340px;
+    height: 400px;
     padding: 10px;
+    margin-left: 10px;
     float: left;
     font-size: 24px;
 }
 #Menu{
+
     width: 180px;
+    height: 400px;
     padding: 10px;
     float: right;
 	
