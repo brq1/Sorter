@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Sorter version 3
 
 1. This is simple project with sorting data: alphabetically, with length text and randomly, with data input from user.
