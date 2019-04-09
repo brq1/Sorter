@@ -17,7 +17,7 @@ function sortInTurn(){
 ```
 ## Preview
 
-https://brq1.github.io/Sorter/
+https://brq1.github.io/Sorter/src
 
 ## Usage
 
